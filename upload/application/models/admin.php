@@ -8,6 +8,7 @@ class Admin extends CI_Model implements ICrud {
 	public function __construct()
 	{
 		parent::__construct();
+		
 	}
 	
 	public function count($parameter = null, $extension = null)

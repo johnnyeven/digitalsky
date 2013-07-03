@@ -5,11 +5,102 @@ class Login extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->database('default');
 	}
 	
 	public function index()
 	{
-		$this->load->view('about_view');
+		$redirectUrl = $this->input->get('redirect', TRUE);
+
+		$this->load->model('check_user', 'check');
+		$user = $this->check->validate(false);
+		if(!empty($user))
+		{
+			if(!empty($redirectUrl))
+			{
+				redirect(urldecode($redirectUrl));
+			}
+			else
+			{
+				redirect('/admin/job_list');
+			}
+		}
+		else
+		{
+			$this->load->view('admin/login_view');
+		}
+	}
+	
+	public function submit()
+	{
+		$redirectUrl = $this->input->post('redirect', TRUE);
+		$accountName = $this->input->post('accountName', TRUE);
+		$accountPass = $this->input->post('accountPass', TRUE);
+		$cookieRemain = $this->input->post('cookieRemain', TRUE);
+		$isAjaxRequest = $this->input->post('isAjaxRequest', TRUE);
+		
+		if(!empty($accountName) && !empty($accountPass))
+		{
+			$this->load->model('admin');
+			$this->load->helper('security');
+			
+			$parameter = array(
+				'admin_account'		=>	$accountName,
+				'admin_pass'			=>	encrypt_pass($accountPass)
+			);
+			$result = $this->admin->read($parameter);
+			
+			if($result === FALSE)
+			{
+				showMessage(MESSAGE_TYPE_ERROR, 'USER_INVALID', '', 'user/login?redirect=' . $redirectUrl, true, 5);
+			}
+			else
+			{
+				$row = $result[0];
+				$cookie = array(
+					'admin_id'			=>		$row->admin_id,
+					'admin_account'	=>		$accountName
+				);
+				$cookieStr = json_encode($cookie);
+				$this->load->helper('ucenter_sync');
+				$cookieStr = _authcode($cookieStr, 'ENCODE');
+	
+				$this->load->helper('cookie');
+				$cookie = array(
+						'name'		=> 'user',
+						'value'		=> $cookieStr,
+						'expire'	=> $this->config->item('cookie_expire'),
+						'domain'	=> $this->config->item('cookie_domain'),
+						'path'		=> $this->config->item('cookie_path'),
+						'prefix'	=> $this->config->item('cookie_prefix')
+				);
+				if($cookieRemain=='1') {
+					$cookie['expire'] = strval(intval($this->config->item('cookie_expire')) * 30);
+				}
+	            $this->input->set_cookie($cookie);
+	            
+				$redirectUrl = empty($redirectUrl) ? 'admin/job_list' : $redirectUrl;
+				showMessage(MESSAGE_TYPE_SUCCESS, 'USER_LOGIN_SUCCESS', $result, $redirectUrl, true, 5);
+			}
+		}
+		else
+		{
+			showMessage(MESSAGE_TYPE_ERROR, 'USER_LOGIN_ERROR_NO_PARAM', '', 'admin/login?redirect=' . $redirectUrl, true, 5);
+		}
+	}
+	
+	public function out()
+	{
+		$this->load->helper('cookie');
+		
+		$cookie = array(
+			'name'		=> 'user',
+			'domain'	=> $this->config->item('cookie_domain'),
+			'path'		=> $this->config->item('cookie_path'),
+			'prefix'	=> $this->config->item('cookie_prefix')
+		);
+		delete_cookie($cookie);
+		showMessage(MESSAGE_TYPE_SUCCESS, 'USER_LOGOUT', '退出成功', 'index', true, 5);
 	}
 }
 

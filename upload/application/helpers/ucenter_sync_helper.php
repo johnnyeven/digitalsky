@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-include_once './config.inc.php';
+define('UC_KEY', 'a7ba9540d547843ad43d253f1b609cc24ce9c6b3');
 
 function _authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
 	$ckey_length = 4;
