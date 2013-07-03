@@ -54,7 +54,7 @@
 										<a href="javascript:;" class="btn btn-small btn-warning">
 											<i class="icon-edit"></i>								
 										</a>					
-										<a href="javascript:;" class="btn btn-small">
+										<a href="<?php echo site_url('admin/job_list/delete/' . $row->job_id); ?>" class="btn btn-small">
 											<i class="icon-remove"></i>						
 										</a>
 									</td>

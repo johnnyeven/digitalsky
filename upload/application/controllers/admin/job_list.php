@@ -29,6 +29,17 @@ class Job_list extends CI_Controller
 		$this->load->model('render');
 		$this->render->render($this->pageName, $data);
 	}
+	
+	public function delete($jobId = 0)
+	{
+		if(!empty($jobId))
+		{
+			$this->load->model('job');
+			
+			$this->job->delete($jobId);
+		}
+		redirect('admin/job_list');
+	}
 }
 
 ?>

@@ -23,23 +23,23 @@
 				<ul id="main-nav" class="nav nav-tabs nav-stacked">
 					
 					<li<?php if($page_name=='admin/job_list'): ?> class="active"<?php endif; ?>>
-						<a href="./">
+						<a href="<?php echo site_url('admin/job_list'); ?>">
 							<i class="icon-home"></i>
-							Dashboard 		
+							职位列表
 						</a>
 					</li>
 					
 					<li<?php if($page_name=='admin/job_add'): ?> class="active"<?php endif; ?>>
-						<a href="./plans.html">
+						<a href="<?php echo site_url('admin/job_add'); ?>">
 							<i class="icon-th-list"></i>
-							Pricing Plans		
+							添加/修改职位
 						</a>
 					</li>
 					
 					<li<?php if($page_name=='admin/account'): ?> class="active"<?php endif; ?>>
-						<a href="./account.html">
+						<a href="<?php echo site_url('admin/account'); ?>">
 							<i class="icon-user"></i>
-							User Account							
+							管理员设置
 						</a>
 					</li>
 					
