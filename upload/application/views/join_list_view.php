@@ -40,25 +40,49 @@
         <ul class="join_zpgw">
         	<li class="l1"><img src="<?php echo site_url('resources/images/zp_js.jpg'); ?>" /></li>
             <li class="l2">
-            	<a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发师</a><br /> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a>
+            <?php if(!empty($result1)): ?>
+            	<?php foreach($result1 as $row): ?>
+            	<a href="<?php echo site_url('show/job/' . $row->job_id); ?>">▪ <?php echo $row->job_name; ?></a>
+            	<?php endforeach; ?>
+            <?php else: ?>
+            	<a href="javascript:void(0)">当前分类下没有职位</a>
+            <?php endif; ?>
             </li>
         </ul>
         <ul class="join_zpgw">
         	<li class="l1"><img src="<?php echo site_url('resources/images/zp_yw.jpg'); ?>" /></li>
             <li class="l2">
-            	<a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发师</a><br /> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a>
+            <?php if(!empty($result2)): ?>
+            	<?php foreach($result2 as $row): ?>
+            	<a href="<?php echo site_url('show/job/' . $row->job_id); ?>">▪ <?php echo $row->job_name; ?></a>
+            	<?php endforeach; ?>
+            <?php else: ?>
+            	<a href="javascript:void(0)">当前分类下没有职位</a>
+            <?php endif; ?>
             </li>
         </ul>
         <ul class="join_zpgw">
         	<li class="l1"><img src="<?php echo site_url('resources/images/zp_ms.jpg'); ?>" /></li>
             <li class="l2">
-            	<a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发师</a><br /> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a>
+            <?php if(!empty($result3)): ?>
+            	<?php foreach($result3 as $row): ?>
+            	<a href="<?php echo site_url('show/job/' . $row->job_id); ?>">▪ <?php echo $row->job_name; ?></a>
+            	<?php endforeach; ?>
+            <?php else: ?>
+            	<a href="javascript:void(0)">当前分类下没有职位</a>
+            <?php endif; ?>
             </li>
         </ul>
         <ul class="join_zpgw">
         	<li class="l1"><img src="<?php echo site_url('resources/images/zp_zn.jpg'); ?>" /></li>
             <li class="l2">
-            	<a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发师</a><br /> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a> <a href="#">▪ JAVA开发工程师</a>
+            <?php if(!empty($result4)): ?>
+            	<?php foreach($result4 as $row): ?>
+            	<a href="<?php echo site_url('show/job/' . $row->job_id); ?>">▪ <?php echo $row->job_name; ?></a>
+            	<?php endforeach; ?>
+            <?php else: ?>
+            	<a href="javascript:void(0)">当前分类下没有职位</a>
+            <?php endif; ?>
             </li>
         </ul>
         

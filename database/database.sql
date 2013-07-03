@@ -29,6 +29,8 @@ CREATE  TABLE IF NOT EXISTS `digitalsky_db`.`digisky_job` (
   `job_id` INT NOT NULL AUTO_INCREMENT ,
   `job_name` CHAR(32) NOT NULL ,
   `job_category` INT NOT NULL ,
+  `job_count` INT NOT NULL ,
+  `job_exp` CHAR(32) NOT NULL ,
   `job_content` TEXT NOT NULL ,
   `job_posttime` INT NOT NULL ,
   `job_endtime` INT NOT NULL ,

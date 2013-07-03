@@ -12,26 +12,31 @@ class Join extends CI_Controller
 	
 	public function index()
 	{
+		$time = time();
 		$extension = array(
 			'order_by'		=>	array('job_posttime', 'desc')
 		);
 		$parameter = array(
-			'job_category'	=>	1
+			'job_category'		=>	1,
+			'job_endtime >='	=>	$time
 		);
 		$result1 = $this->job->read($parameter, $extension, 5);
 		
 		$parameter = array(
-			'job_category'	=>	2
+			'job_category'		=>	2,
+			'job_endtime >='	=>	$time
 		);
 		$result2 = $this->job->read($parameter, $extension, 5);
 		
 		$parameter = array(
-			'job_category'	=>	3
+			'job_category'		=>	3,
+			'job_endtime >='	=>	$time
 		);
 		$result3 = $this->job->read($parameter, $extension, 5);
 		
 		$parameter = array(
-			'job_category'	=>	4
+			'job_category'		=>	4,
+			'job_endtime >='	=>	$time
 		);
 		$result4 = $this->job->read($parameter, $extension, 5);
 		
