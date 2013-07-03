@@ -51,44 +51,52 @@
         	<li>
             	<div class="d1"><img src="<?php echo site_url('resources/images/join_bg2.jpg'); ?>" /></div>
                 <div class="d2">
-                	<p><a href="join_show.html" class="cur">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ 3D角色美术师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
+                <?php if(!empty($result1)): ?>
+                	<?php foreach($result1 as $row): ?>
+                	<p><a href="<?php echo site_url('show/' . $row->job_id); ?>" class="cur">▪ <?php echo $row->job_name; ?></a></p>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                	<p>当前分类下没有职位</p>
+                <?php endif; ?>
                 </div>
                 <div class="d3"><a href="#"><img src="<?php echo site_url('resources/images/more.jpg'); ?>" /></a></div>
             </li>
             <li>
             	<div class="d1"><img src="<?php echo site_url('resources/images/join_bg3.jpg'); ?>" /></div>
                 <div class="d2">
-                	<p><a href="#" class="cur">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ 3D角色美术师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
+                <?php if(!empty($result2)): ?>
+                	<?php foreach($result2 as $row): ?>
+                	<p><a href="<?php echo site_url('show/' . $row->job_id); ?>" class="cur">▪ <?php echo $row->job_name; ?></a></p>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                	<p>当前分类下没有职位</p>
+                <?php endif; ?>
                 </div>
                 <div class="d3"><a href="#"><img src="<?php echo site_url('resources/images/more.jpg'); ?>" /></a></div>
             </li>
             <li>
             	<div class="d1"><img src="<?php echo site_url('resources/images/join_bg4.jpg'); ?>" /></div>
                 <div class="d2">
-                	<p><a href="#" class="cur">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ 3D角色美术师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
+                <?php if(!empty($result3)): ?>
+                	<?php foreach($result3 as $row): ?>
+                	<p><a href="<?php echo site_url('show/' . $row->job_id); ?>" class="cur">▪ <?php echo $row->job_name; ?></a></p>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                	<p>当前分类下没有职位</p>
+                <?php endif; ?>
                 </div>
                 <div class="d3"><a href="#"><img src="<?php echo site_url('resources/images/more.jpg'); ?>" /></a></div>
             </li>
             <li>
             	<div class="d1"><img src="<?php echo site_url('resources/images/join_bg5.jpg'); ?>" /></div>
                 <div class="d2">
-                	<p><a href="#" class="cur">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ 3D角色美术师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
-                    <p><a href="#">▪ JAVA开发工程师</a></p>
+                <?php if(!empty($result4)): ?>
+                	<?php foreach($result4 as $row): ?>
+                	<p><a href="<?php echo site_url('show/' . $row->job_id); ?>" class="cur">▪ <?php echo $row->job_name; ?></a></p>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                	<p>当前分类下没有职位</p>
+                <?php endif; ?>
                 </div>
                 <div class="d3"><a href="#"><img src="<?php echo site_url('resources/images/more.jpg'); ?>" /></a></div>
             </li>
