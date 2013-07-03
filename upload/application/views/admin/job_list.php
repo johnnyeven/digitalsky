@@ -7,8 +7,8 @@
 					
 					<div class="span9">
                         <form id="edit-category" class="form-horizontal" >
-                            <fieldset>					
-                                <select class="input-medium disabled" id="jobCategory" name="jobCategory">
+                            <fieldset>
+                                <select class="input-medium" id="jobCategory" name="jobCategory">
                                     <option value="1">技术类</option>
                                     <option value="2">业务类</option>
                                     <option value="3">美术类</option>
@@ -51,7 +51,7 @@
 									<td><?php echo date('Y-m-d', $row->job_posttime); ?></td>
 									<td><?php echo date('Y-m-d', $row->job_endtime); ?><?php if($row->job_endtime < time()): ?><span style="color:#F00">(已过期)</span><?php endif; ?></td>
 									<td class="action-td">
-										<a href="javascript:;" class="btn btn-small btn-warning">
+										<a href="<?php echo site_url('admin/job_add/edit/' . $row->job_id); ?>" class="btn btn-small btn-warning">
 											<i class="icon-edit"></i>								
 										</a>					
 										<a href="<?php echo site_url('admin/job_list/delete/' . $row->job_id); ?>" class="btn btn-small">

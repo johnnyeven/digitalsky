@@ -39,6 +39,7 @@ class Job_add extends CI_Controller
 			$this->load->model('render');
 			$data = array(
 				'edit'				=>	'1',
+				'job_id'			=>	$jobId,
 				'row'				=>	$result
 			);
 			$this->render->render($this->pageName, $data);
@@ -47,7 +48,36 @@ class Job_add extends CI_Controller
 	
 	public function submit()
 	{
+		$this->load->model('job');
 		
+		$edit = $this->input->post('edit', TRUE);
+		$jobId = $this->input->post('jobId', TRUE);
+		$jobName = $this->input->post('jobName', TRUE);
+		$jobCategory = $this->input->post('jobCategory', TRUE);
+		$jobCount = $this->input->post('jobCount', TRUE);
+		$jobExp = $this->input->post('jobExp', TRUE);
+		$jobEndtime = $this->input->post('jobEndtime', TRUE);
+		$jobContent = $this->input->post('wysiwyg');
+		
+		$row = array(
+			'job_name'				=>	$jobName,
+			'job_category'		=>	intval($jobCategory),
+			'job_count'				=>	intval($jobCount),
+			'job_exp'				=>	$jobExp,
+			'job_content'			=>	$jobContent,
+			'job_posttime'		=>	time(),
+			'job_endtime'			=>	strtotime("{$jobEndtime} 00:00:00")
+		);
+		
+		if(!empty($edit))
+		{
+			$this->job->update($jobId, $row);
+		}
+		else
+		{
+			$this->job->create($row);
+		}
+		redirect('admin/job_list');
 	}
 }
 
