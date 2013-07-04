@@ -64,6 +64,21 @@ class Account extends CI_Controller
 		}
 	}
 	
+	public function delete($adminId = 0)
+	{
+		if(!empty($adminId))
+		{
+			if($this->user->admin_init != '1')
+			{
+				showMessage(MESSAGE_TYPE_ERROR, 'USER_NO_PERMISSION', '', 'admin/account', true, 5);
+			}
+			$this->load->model('admin');
+				
+			$this->admin->delete($adminId);
+		}
+		redirect('admin/account');
+	}
+	
 	public function submit()
 	{
 		$this->load->model('admin');

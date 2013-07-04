@@ -22,9 +22,16 @@
 				
 				<ul id="main-nav" class="nav nav-tabs nav-stacked">
 					
+					<li<?php if($page_name=='admin/sliders'): ?> class="active"<?php endif; ?>>
+						<a href="<?php echo site_url('admin/sliders'); ?>">
+							<i class="icon-home"></i>
+							首页幻灯管理
+						</a>
+					</li>
+                    
 					<li<?php if($page_name=='admin/job_list'): ?> class="active"<?php endif; ?>>
 						<a href="<?php echo site_url('admin/job_list'); ?>">
-							<i class="icon-home"></i>
+							<i class="icon-th-list"></i>
 							职位列表
 						</a>
 					</li>

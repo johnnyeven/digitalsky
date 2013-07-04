@@ -38,15 +38,13 @@
 		<div class="slider">
 			<div class="flexslider">
 				<ul class="slides">
+                	<?php if(!empty($slider)): ?>
+                    <?php foreach($slider as $row): ?>
                 	<li>
-						<div class="img"><img src="<?php echo site_url('resources/images/move/ad_banner.jpg'); ?>" height="386" width="1004" alt="" /></div>
+						<div class="img"><img src="<?php echo site_url($row->slider_pic_path); ?>" alt="" /></div>
 					</li>
-					<li>
-						<div class="img"><img src="<?php echo site_url('resources/images/move/ad_home.jpg'); ?>" height="386" width="1004" alt="" /></div>
-					</li>
-					<li>
-						<div class="img"><img src="<?php echo site_url('resources/images/move/ad_nba.jpg'); ?>" height="386" width="1004" alt="" /></div>
-					</li>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
 				</ul>
 			</div>
 		</div>
@@ -57,12 +55,12 @@
 <script defer src="<?php echo site_url('resources/js/slider.js'); ?>"></script> 
 <script type="text/javascript">
     $(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
+		$('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+				$('body').removeClass('loading');
+			}
+		});
     });
   </script>
     </div>
