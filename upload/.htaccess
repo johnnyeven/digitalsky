@@ -1,4 +1,4 @@
 RewriteEngine on
-RewriteBase /digitalsky/upload/
+RewriteBase /
 RewriteCond $1 !^(index\.php|resources|robot\.txt|api|uc_client|config\.inc\.php)
 RewriteRule ^(.*)$ index.php/$1 [L]

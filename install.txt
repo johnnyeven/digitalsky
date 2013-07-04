@@ -1,0 +1,5 @@
+1、将./upload/目录下的所有文件上传到服务器根目录下
+2、将./database/目录下的database.sql文件导入到MySQL服务器
+
+通过 http://你的域名/index 或者 http://你的域名/，访问首页
+通过 http://你的域名/admin/login 登录后台，默认用户名admin，密码123456，登录后可修改用户名或者密码或者添加其他管理员
