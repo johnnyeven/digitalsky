@@ -3,3 +3,9 @@
 
 通过 http://你的域名/index 或者 http://你的域名/，访问首页
 通过 http://你的域名/admin/login 登录后台，默认用户名admin，密码123456，登录后可修改用户名或者密码或者添加其他管理员
+
+注意：如果./upload/目录下的文件没有放在服务器根目录，比如是放在 http://你的域名/home/ 目录下，那么请修改./upload/目录下的.htaccess文件
+将第二行
+RewriteBase /
+修改为
+RewriteBase /home/
