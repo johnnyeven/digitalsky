@@ -15,15 +15,24 @@ class Job_list extends CI_Controller
 	
 	public function index()
 	{
+		$jobCategory = $this->input->post('jobCategory', TRUE);
+		$jobCategory = empty($jobCategory) ? '' : $jobCategory;
+		if(!empty($jobCategory))
+		{
+			$parameter = array(
+				'job_category'		=>	$jobCategory
+			);
+		}
 		$this->load->model('job');
 		$extension = array(
 			'order_by'		=>	array('job_endtime', 'desc')
 		);
-		$result = $this->job->read(null, $extension, 20, 0);
+		$result = $this->job->read($parameter, $extension, 20, 0);
 		
 		$data = array(
 			'admin'					=>	$this->user,
 			'page_name'			=>	$this->pageName,
+			'category'				=>	$jobCategory,
 			'result'					=>	$result
 		);
 		$this->load->model('render');

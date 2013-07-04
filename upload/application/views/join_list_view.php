@@ -22,10 +22,10 @@
         </div>
         <div class="co2">
         	<p>
-            	<a href="index.html">首页</a>
-                <a href="about.html">关于数字天空</a>
-                <a href="honor.html">荣誉出品</a>
-                <a href="join.html">加入我们</a>
+            	<a href="<?php echo site_url('index'); ?>">首页</a>
+                <a href="<?php echo site_url('about'); ?>">关于数字天空</a>
+                <a href="<?php echo site_url('honor'); ?>">荣誉出品</a>
+                <a href="<?php echo site_url('join'); ?>">加入我们</a>
             </p>
         </div>
     </div>
