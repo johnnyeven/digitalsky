@@ -59,3 +59,12 @@ USE `digitalsky_db` ;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `digitalsky_db`.`digisky_admin`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `digitalsky_db`;
+INSERT INTO `digitalsky_db`.`digisky_admin` (`admin_id`, `admin_account`, `admin_pass`, `admin_init`, `admin_starttime`, `admin_lastlogin`) VALUES (1, 'admin', 'd93a5def7511da3d0f2d171d9c344e91', 1, 0, 0);
+
+COMMIT;

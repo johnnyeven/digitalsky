@@ -41,7 +41,15 @@
                 	<?php if(!empty($slider)): ?>
                     <?php foreach($slider as $row): ?>
                 	<li>
-						<div class="img"><img src="<?php echo site_url($row->slider_pic_path); ?>" alt="" /></div>
+						<div class="img">
+                        <?php if(!empty($row->slider_url)): ?>
+                        <a href="<?php echo $row->slider_url; ?>" target="_blank">
+                        <?php endif; ?>
+                        	<img src="<?php echo site_url($row->slider_pic_path); ?>" alt="" />
+                        <?php if(!empty($row->slider_url)): ?>
+                        </a>
+                        <?php endif; ?>
+                        </div>
 					</li>
                     <?php endforeach; ?>
                     <?php endif; ?>

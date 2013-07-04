@@ -61,6 +61,11 @@ class Job_add extends CI_Controller
 		$jobEndtime = $this->input->post('jobEndtime', TRUE);
 		$jobContent = $this->input->post('wysiwyg');
 		
+		if(empty($jobName) || empty($jobContent))
+		{
+			showMessage(MESSAGE_TYPE_ERROR, 'NO_PARAM', '', 'admin/job_add', true, 5);
+		}
+		
 		$row = array(
 			'job_name'				=>	$jobName,
 			'job_category'		=>	intval($jobCategory),

@@ -74,6 +74,11 @@ class Sliders extends CI_Controller
 		$sliderPicPath = $this->input->post('sliderPicPath', TRUE);
 		$sliderUrl = $this->input->post('sliderUrl', TRUE);
 		$sliderSort = $this->input->post('sliderSort', TRUE);
+
+		if(empty($sliderPicPath))
+		{
+			showMessage(MESSAGE_TYPE_ERROR, 'NO_PARAM', '', 'admin/sliders', true, 5);
+		}
 		
 		$row = array(
 			'slider_pic_path'			=>	$sliderPicPath,

@@ -9,7 +9,7 @@
 						<span class="account-role">管理员</span>
 						
 						<span class="account-actions">
-							<a href="javascript:;">更改密码</a> |
+							<a href="<?php echo site_url('admin/account/edit/' . $admin->admin_id); ?>">更改密码</a> |
 							
 							<a href="<?php echo site_url('admin/login/out'); ?>">退出登录</a>
 						</span>

@@ -25,7 +25,7 @@
 						
 						<ul class="dropdown-menu">
 							<li>
-								<a href="./change_password.html"><i class="icon-lock"></i> 更改密码</a>
+								<a href="<?php echo site_url('admin/account/edit/' . $admin->admin_id); ?>"><i class="icon-lock"></i> 更改密码</a>
 							</li>
 							
 							<li class="divider"></li>

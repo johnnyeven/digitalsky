@@ -2,7 +2,7 @@
 	
 	<div class="container">				
 		<hr />
-		<p>&copy; 2012 Go Ideate.</p>
+		<p>&copy; 2013 JohnNy EVEN.</p>
 	</div> <!-- /container -->
 	
 </div>

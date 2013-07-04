@@ -73,7 +73,18 @@ class Account extends CI_Controller
 				showMessage(MESSAGE_TYPE_ERROR, 'USER_NO_PERMISSION', '', 'admin/account', true, 5);
 			}
 			$this->load->model('admin');
-				
+			
+			$result = $this->admin->read(array(
+				'admin_id'		=>	$adminId
+			));
+			if(!empty($result))
+			{
+				$row = $result[0];
+				if($row->admin_init == '1')
+				{
+					showMessage(MESSAGE_TYPE_ERROR, 'USER_DELETE_FORBIDDEN', '', 'admin/account', true, 5);
+				}
+			}
 			$this->admin->delete($adminId);
 		}
 		redirect('admin/account');
@@ -92,6 +103,11 @@ class Account extends CI_Controller
 		if($this->user->admin_init != '1' && $this->user->admin_id != $adminId)
 		{
 			showMessage(MESSAGE_TYPE_ERROR, 'USER_NO_PERMISSION', '', 'admin/account', true, 5);
+		}
+		
+		if(empty($adminAccount) || (empty($edit) && empty($adminPass)))
+		{
+			showMessage(MESSAGE_TYPE_ERROR, 'NO_PARAM', '', 'admin/account', true, 5);
 		}
 		
 		$row = array(
