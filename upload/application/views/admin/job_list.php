@@ -6,13 +6,14 @@
 				<div class="row">
 					
 					<div class="span9">
-                        <form id="edit-category" class="form-horizontal" >
+                        <form id="edit_category" class="form-horizontal" method="post" action="" >
                             <fieldset>
-                                <select class="input-medium" id="jobCategory" name="jobCategory">
-                                    <option value="1">技术类</option>
-                                    <option value="2">业务类</option>
-                                    <option value="3">美术类</option>
-                                    <option value="4">职能类</option>
+                                <select class="input-medium" id="jobCategory" name="jobCategory" onchange="edit_category.submit();">
+                                    <option value="0">全部类别</option>
+                                    <option value="1"<?php if($category=='1'): ?> selected="selected"<?php endif; ?>>技术类</option>
+                                    <option value="2"<?php if($category=='2'): ?> selected="selected"<?php endif; ?>>业务类</option>
+                                    <option value="3"<?php if($category=='3'): ?> selected="selected"<?php endif; ?>>美术类</option>
+                                    <option value="4"<?php if($category=='4'): ?> selected="selected"<?php endif; ?>>职能类</option>
                                 </select>
                             </fieldset>
                         </form>

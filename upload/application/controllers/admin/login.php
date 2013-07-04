@@ -52,7 +52,7 @@ class Login extends CI_Controller
 			
 			if($result === FALSE)
 			{
-				showMessage(MESSAGE_TYPE_ERROR, 'USER_INVALID', '', 'user/login?redirect=' . $redirectUrl, true, 5);
+				showMessage(MESSAGE_TYPE_ERROR, 'USER_INVALID', '', 'admin/login?redirect=' . $redirectUrl, true, 5);
 			}
 			else
 			{
