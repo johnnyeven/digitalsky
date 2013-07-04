@@ -38,6 +38,8 @@ class Job_add extends CI_Controller
 
 			$this->load->model('render');
 			$data = array(
+				'admin'					=>	$this->user,
+				'page_name'			=>	$this->pageName,
 				'edit'				=>	'1',
 				'job_id'			=>	$jobId,
 				'row'				=>	$result

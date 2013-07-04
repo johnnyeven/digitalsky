@@ -50,7 +50,10 @@ class Admin extends CI_Model implements ICrud {
 		}
 		if(!empty($extension))
 		{
-			
+			if(!empty($extension['order_by']))
+			{
+				$this->db->order_by($extension['order_by'][0], $extension['order_by'][1]);
+			}
 		}
 		if($limit==0 && $offset==0) {
 			$query = $this->db->get($this->accountTable);

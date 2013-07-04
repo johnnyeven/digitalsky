@@ -24,7 +24,7 @@
 										
 					<div class="widget-header">
 						<i class="icon-th-list"></i>
-						<h3>Table</h3>
+						<h3>职位列表</h3>
 					</div> <!-- /widget-header -->
 					
 					<div class="widget-content">

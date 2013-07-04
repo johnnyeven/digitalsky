@@ -16,6 +16,8 @@ CREATE  TABLE IF NOT EXISTS `digitalsky_db`.`digisky_admin` (
   `admin_account` CHAR(32) NOT NULL ,
   `admin_pass` CHAR(32) NOT NULL ,
   `admin_init` TINYINT NOT NULL DEFAULT 0 ,
+  `admin_starttime` INT NOT NULL ,
+  `admin_lastlogin` INT NOT NULL ,
   PRIMARY KEY (`admin_id`) )
 ENGINE = InnoDB;
 
@@ -35,6 +37,20 @@ CREATE  TABLE IF NOT EXISTS `digitalsky_db`.`digisky_job` (
   `job_posttime` INT NOT NULL ,
   `job_endtime` INT NOT NULL ,
   PRIMARY KEY (`job_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `digitalsky_db`.`digisky_slider`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `digitalsky_db`.`digisky_slider` ;
+
+CREATE  TABLE IF NOT EXISTS `digitalsky_db`.`digisky_slider` (
+  `slider_id` INT NOT NULL AUTO_INCREMENT ,
+  `slider_pic_path` TEXT NOT NULL ,
+  `slider_url` TEXT NOT NULL ,
+  `slider_sort` INT NOT NULL ,
+  PRIMARY KEY (`slider_id`) )
 ENGINE = InnoDB;
 
 USE `digitalsky_db` ;
