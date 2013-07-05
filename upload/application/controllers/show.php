@@ -13,6 +13,9 @@ class Show extends CI_Controller
 	
 	public function job($jobId = 0)
 	{
+		$config = $this->mconfig->read();
+		$config = $config[0];
+		
 		if(!empty($jobId))
 		{
 			$parameter = array(
@@ -33,7 +36,8 @@ class Show extends CI_Controller
 				$cateResult = $this->job->read($parameter, $extension);
 			}
 			$data = array(
-				'value'				=>	$result,
+				'config'			=>	$config,
+				'value'			=>	$result,
 				'category'		=>	$cateResult
 			);
 			$this->load->view('show_view', $data);

@@ -10,12 +10,16 @@ class Index extends CI_Controller
 	
 	public function index()
 	{
+		$config = $this->mconfig->read();
+		$config = $config[0];
+		
 		$this->load->model('slider');
 		$result = $this->slider->read(null, array(
 			'order_by'			=>	array('slider_sort', 'asc')
 		));
 		$data = array(
-			'slider'		=>	$result
+			'config'		=>		$config,
+			'slider'		=>		$result
 		);
 		$this->load->view('index_view', $data);
 	}
