@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>数字天空——荣誉出品</title>
+<title><?php echo $config->config_title; ?>——荣誉出品</title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/images/style.css'); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/images/show.css'); ?>" />
 <script type="text/javascript" src="<?php echo base_url('resources/js/jquery-1.9.1.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('resources/js/favorite.js'); ?>"></script>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
 	<div id="weibo">
     	<p>
         <a href="#"><img src="<?php echo base_url('resources/images/wb1.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb2.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb3.jpg'); ?>" /></a>
-        <a href="#"><img src="<?php echo base_url('resources/images/wb4.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb5.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb6.jpg'); ?>" /></a> <a href="#" class="a7">官方微博</a>  <a href="#">加入收藏</a>
+        <a href="#"><img src="<?php echo base_url('resources/images/wb4.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb5.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb6.jpg'); ?>" /></a> <a href="#" class="a7">官方微博</a>  <a href="javascript:addFavorite()">加入收藏</a>
         </p>
     </div>
     <div id="header">
@@ -53,7 +54,7 @@
                 </ul>
             </div>
             <div class="w3">
-            	<img src="<?php echo site_url('resources/images/honor_img1.jpg'); ?>" border="0" usemap="#Map" />
+            	<img src="<?php echo base_url('resources/images/honor_img1.jpg'); ?>" border="0" usemap="#Map" />
                 <map name="Map" id="Map">
                   <area shape="rect" coords="42,185,265,243" href="#" />
                 </map>
@@ -62,7 +63,7 @@
         
         
         <div class="pos">
-        	<img src="<?php echo site_url('resources/images/honor_tit2.jpg'); ?>" />
+        	<img src="<?php echo base_url('resources/images/honor_tit2.jpg'); ?>" />
         </div>
         
         <div class="honor_con">
@@ -176,9 +177,7 @@
     </div>
     
     <div id="footer">
-        <p>
-        	数字天空 - 版权所有 增值电信业务经营许可证 XXXXXXXXXXXXXXXX
-        </p>
+        <?php echo $config->config_footer; ?>
     </div>
 </div><!--#end cps-->
 </body>

@@ -9,7 +9,12 @@ class Honor extends CI_Controller
 	
 	public function index()
 	{
-		$this->load->view('honor_view');
+		$config = $this->mconfig->read();
+		$config = $config[0];
+		$data = array(
+			'config'		=>		$config
+		);
+		$this->load->view('honor_view', $data);
 	}
 }
 

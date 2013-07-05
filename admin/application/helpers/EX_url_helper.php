@@ -6,7 +6,7 @@ function showMessage($type, $info, $message, $redirect = '', $auteRedirect = fal
 	$redirect = empty($redirect) ? '' : urlencode(site_url($redirect));
 	$message = urlencode($message);
 	$auteRedirect = $auteRedirect ? 1 : 0;
-	redirect(site_url("admin/message?type={$type}&info={$info}&message={$message}&redirect={$redirect}&auto_redirect={$auteRedirect}&auto_delay={$delay}"));
+	redirect(site_url("message?type={$type}&info={$info}&message={$message}&redirect={$redirect}&auto_redirect={$auteRedirect}&auto_delay={$delay}"));
 }
 
 ?>

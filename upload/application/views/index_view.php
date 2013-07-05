@@ -2,11 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>数字天空</title>
+<title><?php echo $config->config_title; ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/images/style.css'); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/images/index.css'); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/images/move/zzsc.css'); ?>" />
 <script type="text/javascript" src="<?php echo base_url('resources/js/jquery-1.9.1.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('resources/js/favorite.js'); ?>"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
         <a href="#"><img src="<?php echo base_url('resources/images/wb1.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb2.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('images/wb3.jpg'); ?>" /></a>
         <a href="#"><img src="<?php echo base_url('resources/images/wb4.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb5.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('images/wb6.jpg'); ?>" /></a> 
         </div>
-        <div class="p2"><a href="#" class="a7">官方微博</a>  <a href="#">加入收藏</a></div>
+        <div class="p2"><a href="#" class="a7">官方微博</a>  <a href="javascript:addFavorite()">加入收藏</a></div>
     </div>
     <div id="header">
     	<div class="co1">
@@ -87,9 +88,7 @@
     </div>
     
     <div id="footer">
-        <p>
-        	数字天空 - 版权所有 增值电信业务经营许可证 XXXXXXXXXXXXXXXX
-        </p>
+        <?php echo $config->config_footer; ?>
     </div>
 </div><!--#end cps-->
 </body>

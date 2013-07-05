@@ -27,7 +27,7 @@ class Job_list extends CI_Controller
 		$extension = array(
 			'order_by'		=>	array('job_endtime', 'desc')
 		);
-		$result = $this->job->read($parameter, $extension, 20, 0);
+		$result = $this->job->read($parameter, $extension);
 		
 		$data = array(
 			'admin'					=>	$this->user,

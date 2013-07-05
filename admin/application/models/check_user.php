@@ -12,7 +12,7 @@ class Check_user extends CI_Model {
 		$this->load->helper('url');
 		$this->load->helper('security');
 		$this->load->helper('cookie');
-		$redirectUrl = 'admin/login?redirect=' . urlencode($this->input->server('REQUEST_URI'));
+		$redirectUrl = 'login?redirect=' . urlencode($this->input->server('REQUEST_URI'));
 		$cookieName = $this->config->item('cookie_prefix') . 'user';
 		if(!$this->input->cookie($cookieName, TRUE)) {
 

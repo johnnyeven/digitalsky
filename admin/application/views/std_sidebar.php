@@ -21,11 +21,25 @@
 				<hr />
 				
 				<ul id="main-nav" class="nav nav-tabs nav-stacked">
+                
+					<li<?php if($page_name=='config'): ?> class="active"<?php endif; ?>>
+						<a href="<?php echo site_url('config'); ?>">
+							<i class="icon-home"></i>
+							基本配置
+						</a>
+					</li>
 					
 					<li<?php if($page_name=='sliders'): ?> class="active"<?php endif; ?>>
 						<a href="<?php echo site_url('sliders'); ?>">
 							<i class="icon-home"></i>
 							首页幻灯管理
+						</a>
+					</li>
+                    
+					<li<?php if($page_name=='article_list'): ?> class="active"<?php endif; ?>>
+						<a href="<?php echo site_url('article_list'); ?>">
+							<i class="icon-th-list"></i>
+							新闻
 						</a>
 					</li>
                     
