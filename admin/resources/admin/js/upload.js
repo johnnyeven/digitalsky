@@ -1,4 +1,4 @@
-function contentPicUpload(uploadId, contentId, valueId) {
+function contentPicUpload(uploadId, contentId, valueId, mode, maxCount) {
 	$.ajaxFileUpload
 	(
 		{
@@ -18,8 +18,27 @@ function contentPicUpload(uploadId, contentId, valueId) {
 					else
 					{
 						alert(data.msg);
-						$("#" + contentId).append("<p>" + data.data + "</p>");
-						$("#" + valueId).val(data.data);
+						if(mode == "append")
+						{
+							var url = $("#" + valueId).val().split(";");
+							if(url.length < maxCount)
+							{
+								$("#" + valueId).val(data.data + ";" + $("#" + valueId).val());
+							}
+							else
+							{
+								url.pop();
+								url.push(data.data);
+								$("#" + valueId).val(url.join(";"));
+							}
+							$("#" + contentId).prepend("<img src='" + data.data + "' />");
+						}
+						else
+						{
+							$("#" + contentId).empty();
+							$("#" + contentId).append("<img src='" + data.data + "' />");
+							$("#" + valueId).val(data.data);
+						}
 					}
 				}
 			},

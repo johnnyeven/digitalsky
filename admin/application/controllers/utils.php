@@ -32,7 +32,7 @@ class Utils extends CI_Controller
 			$data = $this->upload->data();
 			$msg = '上传成功！';
 			$error = 'null';
-			$fileName = $uploadDir . '/' . $data['file_name'];
+			$fileName = base_url($uploadDir . '/' . $data['file_name']);
 		}
 	
 		$ret = '{';

@@ -11,8 +11,15 @@ class Honor extends CI_Controller
 	{
 		$config = $this->mconfig->read();
 		$config = $config[0];
+		
+		$this->load->model('product');
+		$product = $this->product->read(null, array(
+			'order_by'			=>	array('product_sort', 'asc')
+		));
+		
 		$data = array(
-			'config'		=>		$config
+			'config'		=>		$config,
+			'product'	=>		$product
 		);
 		$this->load->view('honor_view', $data);
 	}

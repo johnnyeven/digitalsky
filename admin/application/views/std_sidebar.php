@@ -39,7 +39,21 @@
 					<li<?php if($page_name=='article_list'): ?> class="active"<?php endif; ?>>
 						<a href="<?php echo site_url('article_list'); ?>">
 							<i class="icon-th-list"></i>
-							新闻
+							新闻管理
+						</a>
+					</li>
+                    
+					<li<?php if($page_name=='product_list'): ?> class="active"<?php endif; ?>>
+						<a href="<?php echo site_url('product_list'); ?>">
+							<i class="icon-th-list"></i>
+							产品管理
+						</a>
+					</li>
+                    
+					<li<?php if($page_name=='product_add'): ?> class="active"<?php endif; ?>>
+						<a href="<?php echo site_url('product_add'); ?>">
+							<i class="icon-th-list"></i>
+							添加/修改产品
 						</a>
 					</li>
                     
