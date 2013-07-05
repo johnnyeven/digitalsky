@@ -3,22 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>数字天空——荣誉出品</title>
-<link rel="stylesheet" type="text/css" href="<?php echo site_url('resources/images/style.css'); ?>" />
-<link rel="stylesheet" type="text/css" href="<?php echo site_url('resources/images/show.css'); ?>" />
-<script type="text/javascript" src="<?php echo site_url('resources/js/jquery-1.9.1.min.js'); ?>"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/images/style.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/images/show.css'); ?>" />
+<script type="text/javascript" src="<?php echo base_url('resources/js/jquery-1.9.1.min.js'); ?>"></script>
 </head>
 
 <body>
 <div id="cps">
 	<div id="weibo">
     	<p>
-        <a href="#"><img src="<?php echo site_url('resources/images/wb1.jpg'); ?>" /></a> <a href="#"><img src="<?php echo site_url('resources/images/wb2.jpg'); ?>" /></a> <a href="#"><img src="<?php echo site_url('resources/images/wb3.jpg'); ?>" /></a>
-        <a href="#"><img src="<?php echo site_url('resources/images/wb4.jpg'); ?>" /></a> <a href="#"><img src="<?php echo site_url('resources/images/wb5.jpg'); ?>" /></a> <a href="#"><img src="<?php echo site_url('resources/images/wb6.jpg'); ?>" /></a> <a href="#" class="a7">官方微博</a>  <a href="#">加入收藏</a>
+        <a href="#"><img src="<?php echo base_url('resources/images/wb1.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb2.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb3.jpg'); ?>" /></a>
+        <a href="#"><img src="<?php echo base_url('resources/images/wb4.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb5.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb6.jpg'); ?>" /></a> <a href="#" class="a7">官方微博</a>  <a href="#">加入收藏</a>
         </p>
     </div>
     <div id="header">
     	<div class="co1">
-        	<img src="<?php echo site_url('resources/images/logo.jpg'); ?>" width="349" height="119" />
+        	<img src="<?php echo base_url('resources/images/logo.jpg'); ?>" width="349" height="119" />
         </div>
         <div class="co2">
         	<p>
@@ -30,13 +30,13 @@
         </div>
     </div>
     <div id="banner">
-    	<img src="<?php echo site_url('resources/images/honor.jpg'); ?>" width="1004" height="103" />
+    	<img src="<?php echo base_url('resources/images/honor.jpg'); ?>" width="1004" height="103" />
     </div>
     
     <div id="main">
     
     	<div class="pos">
-        	<img src="<?php echo site_url('resources/images/honor_tit1.jpg'); ?>" />
+        	<img src="<?php echo base_url('resources/images/honor_tit1.jpg'); ?>" />
         </div>
         
         <div class="honor_con">
@@ -46,10 +46,10 @@
             </div>
             <div class="w2">
             	<ul>
-                	<li><a href="#"><img src="<?php echo site_url('resources/images/img1.jpg'); ?>" width="140" height="81" /></a></li>
-                    <li><a href="#"><img src="<?php echo site_url('resources/images/img1.jpg'); ?>" width="140" height="81" /></a></li>
-                    <li><a href="#"><img src="<?php echo site_url('resources/images/img1.jpg'); ?>" width="140" height="81" /></a></li>
-                    <li><a href="#"><img src="<?php echo site_url('resources/images/img1.jpg'); ?>" width="140" height="81" /></a></li>
+                	<li><a href="#"><img src="<?php echo base_url('resources/images/img1.jpg'); ?>" width="140" height="81" /></a></li>
+                    <li><a href="#"><img src="<?php echo base_url('resources/images/img1.jpg'); ?>" width="140" height="81" /></a></li>
+                    <li><a href="#"><img src="<?php echo base_url('resources/images/img1.jpg'); ?>" width="140" height="81" /></a></li>
+                    <li><a href="#"><img src="<?php echo base_url('resources/images/img1.jpg'); ?>" width="140" height="81" /></a></li>
                 </ul>
             </div>
             <div class="w3">
