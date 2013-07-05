@@ -5,7 +5,7 @@
 修改./upload/application/config/database.php 以及 ./admin/application/config/database.php
 $db['default']['hostname'] = 'localhost';	//服务器地址
 $db['default']['username'] = 'root';		//MySQL登陆名
-$db['default']['password'] = '84@41%%wi96^4';	//MySQL密码
+$db['default']['password'] = '';	//MySQL密码
 这三行修改为对应正确的设置
 
 通过 http://你的域名/index 或者 http://你的域名/，访问首页
@@ -16,3 +16,13 @@ $db['default']['password'] = '84@41%%wi96^4';	//MySQL密码
 RewriteBase /
 修改为
 RewriteBase /home/
+
+若使用Nginx作为服务器，请配置rewrite为以下内容
+location / {
+    root   nginx文档根目录		//例如：/usr/share/nginx/html;
+    index  index.php index.html index.htm;
+    if ($request_filename !~ /(index.php|resources|robot.txt|documents)/){
+            rewrite ^/(.*)$ /index.php?/$1 last;
+            rewrite ^/admin/(.*)$ /admin/index.php?/$1 last;
+    }
+}
