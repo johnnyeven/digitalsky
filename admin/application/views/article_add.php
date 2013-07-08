@@ -47,7 +47,7 @@
 					</div> <!-- /widget-content -->
 					
 				</div>
-                <script src="<?php echo site_url('resources/admin/js/jquery.wysiwyg.js'); ?>" language="javascript"></script>
+                <script src="<?php echo base_url('resources/admin/js/jquery.wysiwyg.js'); ?>" language="javascript"></script>
                 <script language="javascript">
 				$(function() {
 					$('#wysiwyg').wysiwyg({

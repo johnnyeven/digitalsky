@@ -1,4 +1,4 @@
-				<link rel="stylesheet" href="<?php echo site_url('resources/admin/css/jquery-ui.css'); ?>" type="text/css" />
+				<link rel="stylesheet" href="<?php echo base_url('resources/admin/css/jquery-ui.css'); ?>" type="text/css" />
                 <h1 class="page-title">
 					<i class="icon-th-list"></i>
 					添加/编辑职位					
@@ -80,8 +80,8 @@
 					</div> <!-- /widget-content -->
 					
 				</div>
-                <script src="<?php echo site_url('resources/admin/js/jquery.wysiwyg.js'); ?>" language="javascript"></script>
-                <script src="<?php echo site_url('resources/admin/js/jquery-ui.js'); ?>" language="javascript"></script>
+                <script src="<?php echo base_url('resources/admin/js/jquery.wysiwyg.js'); ?>" language="javascript"></script>
+                <script src="<?php echo base_url('resources/admin/js/jquery-ui.js'); ?>" language="javascript"></script>
                 <script language="javascript">
 				$(function() {
 					$('#wysiwyg').wysiwyg({
