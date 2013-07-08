@@ -29,7 +29,7 @@
 								<tr>
 									<td><?php echo $row->slider_id; ?></td>
 									<td><?php echo $row->slider_sort; ?></td>
-									<td><img src="<?php echo site_url($row->slider_pic_path); ?>" style="" /></td>
+									<td><img src="<?php echo $row->slider_pic_path; ?>" style="" /></td>
 									<td style="word-break:break-all;"><?php echo $row->slider_url; ?></td>
 									<td class="action-td">
 										<a href="<?php echo site_url('sliders/edit/' . $row->slider_id); ?>" class="btn btn-small btn-warning">
