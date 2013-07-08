@@ -20,7 +20,8 @@ body{ width:100%; background:url(bg3.jpg) repeat #FFF; color:#4A4A4A; font-famil
 
 #main{ width:1004px; height:auto; background:url(bg3.jpg) repeat; padding:65px 0; clear:both; margin:0 auto; overflow:hidden;}
 	
-	#main .pos{ width:940px; height:46px; margin:0 auto; clear:both;}
+	#main .pos{ width:940px; height:46px; margin:0 auto; clear:both; background:url(honor_tit1.jpg) no-repeat;}
+		#main .pos h1 {font-size:18px;line-height:36px;}
 	#main .content{ width:940px; min-height:500px; height:auto!important; height:500px; overflow:visible; background:url(bg4.jpg) 243px 0 repeat-y; margin:0 auto; clear:both;}
 		#main .content .left{ width:265px; height:auto; float:left; overflow:hidden;}
 			#main .content .left div{ width:245px; height:80px; clear:both; overflow:hidden;}
