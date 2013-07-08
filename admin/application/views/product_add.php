@@ -62,7 +62,7 @@
                                         <?php
                                         if(!empty($row->product_logo_url))
 										{
-											echo "<img src=\"{$row->product_logo_url}\" />";
+											echo "<div class=\"preview\"><img src=\"{$row->product_logo_url}\" /><a href='javascript:void(0)'>取消</a></div>";
 										}
 										?>
                                         </div>
@@ -83,7 +83,7 @@
 											$urlImage = explode(";", $row->product_image_url);
 											foreach($urlImage as $url)
 											{
-												echo "<img src=\"{$url}\" />";
+												echo "<div class=\"preview\"><img src=\"{$url}\" /><a href='javascript:void(0)'>取消</a></div>";
 											}
 										}
 										?>

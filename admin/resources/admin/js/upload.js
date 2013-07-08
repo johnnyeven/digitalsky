@@ -31,12 +31,12 @@ function contentPicUpload(uploadId, contentId, valueId, mode, maxCount) {
 								url.push(data.data);
 								$("#" + valueId).val(url.join(";"));
 							}
-							$("#" + contentId).prepend("<img src='" + data.data + "' />");
+							$("#" + contentId).prepend("<div class=\"preview\"><img src='" + data.data + "' /><a href='javascript:void(0)'>取消</a></div>");
 						}
 						else
 						{
 							$("#" + contentId).empty();
-							$("#" + contentId).append("<img src='" + data.data + "' />");
+							$("#" + contentId).append("<div class=\"preview\"><img src='" + data.data + "' /><a href='javascript:void(0)'>取消</a></div>");
 							$("#" + valueId).val(data.data);
 						}
 					}
@@ -49,3 +49,24 @@ function contentPicUpload(uploadId, contentId, valueId, mode, maxCount) {
 	)
 	return false;
 }
+
+$(function() {
+	$(".preview a").live("click", function() {
+		var value = $(this).parent().parent().prev().find("input[type='hidden']").val();
+		var index = value.indexOf($(this).prev().attr("src") + ";");
+		if(index >= 0)
+		{
+			value = value.replace($(this).prev().attr("src") + ";", "");
+		}
+		else
+		{
+			index = value.indexOf($(this).prev().attr("src"));
+			if(index >= 0)
+			{
+				value = value.replace($(this).prev().attr("src"), "");
+			}
+		}
+		$(this).parent().parent().prev().find("input[type='hidden']").val(value);
+		$(this).parent().remove();
+	});
+});

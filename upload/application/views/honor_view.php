@@ -37,7 +37,7 @@
     <div id="main">
     <?php $i=1; ?>
     <?php foreach($product as $row): ?>
-    	<div class="pos">
+    	<div class="pos1">
         	<h1><?php echo $row->product_name; ?></h1>
         </div>
         

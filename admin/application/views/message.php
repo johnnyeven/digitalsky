@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />    
     
-    <link href="<?php echo site_url('resources/admin/css/bootstrap.min.css'); ?>" rel="stylesheet" />
-    <link href="<?php echo site_url('resources/admin/css/bootstrap-responsive.min.css'); ?>" rel="stylesheet" />
+    <link href="<?php echo base_url('resources/admin/css/bootstrap.min.css'); ?>" rel="stylesheet" />
+    <link href="<?php echo base_url('resources/admin/css/bootstrap-responsive.min.css'); ?>" rel="stylesheet" />
     
-    <link href="<?php echo site_url('resources/admin/css/font-awesome.css'); ?>" rel="stylesheet" />
+    <link href="<?php echo base_url('resources/admin/css/font-awesome.css'); ?>" rel="stylesheet" />
     
-    <link href="<?php echo site_url('resources/admin/css/adminia.css'); ?>" rel="stylesheet" /> 
-    <link href="<?php echo site_url('resources/admin/css/adminia-responsive.css'); ?>" rel="stylesheet" /> 
+    <link href="<?php echo base_url('resources/admin/css/adminia.css'); ?>" rel="stylesheet" /> 
+    <link href="<?php echo base_url('resources/admin/css/adminia-responsive.css'); ?>" rel="stylesheet" /> 
     
-    <link href="<?php echo site_url('resources/admin/css/pages/login.css'); ?>" rel="stylesheet" /> 
+    <link href="<?php echo base_url('resources/admin/css/pages/login.css'); ?>" rel="stylesheet" /> 
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -82,10 +82,10 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="<?php echo site_url('resources/admin/js/jquery-1.7.2.min.js'); ?>"></script>
+<script src="<?php echo base_url('resources/admin/js/jquery-1.7.2.min.js'); ?>"></script>
 
 
-<script src="<?php echo site_url('resources/admin/js/bootstrap.js'); ?>"></script>
+<script src="<?php echo base_url('resources/admin/js/bootstrap.js'); ?>"></script>
 
   </body>
 </html>
