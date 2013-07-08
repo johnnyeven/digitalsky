@@ -68,9 +68,10 @@
             	<img src="<?php echo $row->product_logo_url; ?>" border="0" usemap="#Map<?php echo $i; ?>" />
                 <map name="Map<?php echo $i; ?>" id="Map<?php echo $i; ?>">
                 <?php if(!empty($row->product_ios_download) && !empty($row->product_android_download)): ?>
-                	<area shape="rect" coords="42,185,265,243" href="#" />
+                	<area shape="rect" coords="42,185,265,243" href="<?php echo $row->product_ios_download; ?>" />
+                	<area shape="rect" coords="42,185,265,243" href="<?php echo $row->product_android_download; ?>" />
                 <?php else: ?>
-                	<area shape="rect" coords="42,185,265,243" href="#" />
+                	<area shape="rect" coords="42,185,265,243" href="<?php if(!empty($row->product_ios_download)) echo $row->product_ios_download; else $row->product_android_download; ?>" />
                 <?php endif; ?>
                 </map>
             </div>
