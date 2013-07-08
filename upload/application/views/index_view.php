@@ -46,7 +46,7 @@
                         <?php if(!empty($row->slider_url)): ?>
                         <a href="<?php echo $row->slider_url; ?>" target="_blank">
                         <?php endif; ?>
-                        	<img src="<?php echo base_url($row->slider_pic_path); ?>" alt="" />
+                        	<img src="<?php echo $row->slider_pic_path; ?>" alt="" />
                         <?php if(!empty($row->slider_url)): ?>
                         </a>
                         <?php endif; ?>
