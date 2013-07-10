@@ -12,12 +12,13 @@
 <body>
 <div id="cps">
 	<div id="weibo">
-    <!--
     	<p>
+    <!--
         <a href="#"><img src="<?php echo base_url('resources/images/wb1.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb2.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb3.jpg'); ?>" /></a>
-        <a href="#"><img src="<?php echo base_url('resources/images/wb4.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb5.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb6.jpg'); ?>" /></a> <a href="#" class="a7">官方微博</a>  <a href="javascript:addFavorite()">加入收藏</a>
-        </p>
+        <a href="#"><img src="<?php echo base_url('resources/images/wb4.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb5.jpg'); ?>" /></a> <a href="#"><img src="<?php echo base_url('resources/images/wb6.jpg'); ?>" /></a><a href="#" class="a7">官方微博</a>
     -->
+    	<a href="javascript:addFavorite()">加入收藏</a>
+        </p>
     </div>
     <div id="header">
     	<div class="co1">

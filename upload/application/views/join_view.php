@@ -107,6 +107,7 @@
         	<img src="<?php echo base_url('resources/images/line.jpg'); ?>" />
         </div>
         	
+        <a name="contact"></a>
         <div class="pos41">
         	<img src="<?php echo base_url('resources/images/lxfs.jpg'); ?>" />
         </div>
