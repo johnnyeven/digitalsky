@@ -75,7 +75,7 @@
     </div>
     
     <div id="bot_logo">
-    	<a href="#"><img src="<?php echo base_url('resources/images/bot_logo.jpg'); ?>" /></a>
+    	<a href="<?php echo site_url('index'); ?>"><img src="<?php echo base_url('resources/images/bot_logo.jpg'); ?>" /></a>
     </div>
     
     <div id="footer">
