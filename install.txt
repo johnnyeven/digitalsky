@@ -16,3 +16,5 @@ $db['default']['password'] = '84@41%%wi96^4';	//MySQL密码
 RewriteBase /
 修改为
 RewriteBase /home/
+
+对于./admin/目录来说同/upload/一样需要修改RewriteBase
